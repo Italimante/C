@@ -1,0 +1,13 @@
+# depslib dependency file v1.0
+1525213102 source:c:\andy\tp2_abm\epersona.c
+	"ePersona.h"
+	<stdio.h>
+
+1525206325 c:\andy\tp2_abm\epersona.h
+
+1525213322 source:c:\andy\tp2_abm\main.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	"ePersona.h"
+
