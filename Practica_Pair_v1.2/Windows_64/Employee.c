@@ -3,9 +3,22 @@
 #include "ArrayList.h"
 #include "Employee.h"
 
-
-int employee_compare(void* pEmployeeA,void* pEmployeeB)
+int employee_compareId(void* pEmployeeA, void* pEmployeeB){
+    Employee * a;
+    Employee * b;
+    a = (Employee*)pEmployeeA;
+    b = (Employee*)pEmployeeB;
+    if( a->id > b->id ){
+        return 1;
+    }
+    if( a->id < b->id ){
+        return -1;
+    }
+    return 0;
+}
+int employee_compareName(void* pEmployeeA,void* pEmployeeB)
 {
+    int retorno;
     //Primero castear ambos emleados de void
     Employee * a;
     Employee * b;
@@ -13,17 +26,6 @@ int employee_compare(void* pEmployeeA,void* pEmployeeB)
     a = (Employee*)pEmployeeA;
     b = (Employee*)pEmployeeB;
 
-    /*
-    //Ordeno por ID
-    if( a->id > b->id ){
-        return 1;
-    }
-    if( a->id < b->id ){
-        return -1;
-    }*/
-
-    //Ordeno por nombre
-    int retorno;
     retorno = strcmp( a->name, b->name );
 
     return retorno;
