@@ -9,15 +9,24 @@ int employee_compare(void* pEmployeeA,void* pEmployeeB)
     //Primero castear ambos emleados de void
     Employee * a;
     Employee * b;
+    //Los convierto a empleados
+    a = (Employee*)pEmployeeA;
+    b = (Employee*)pEmployeeB;
 
-    a=(Employee*)pEmployeeA;
-    b=(Employee*)pEmployeeB;
-
-    if( strcmp(a->name,b->name) == 0 ){
-
+    /*
+    //Ordeno por ID
+    if( a->id > b->id ){
+        return 1;
     }
+    if( a->id < b->id ){
+        return -1;
+    }*/
 
-    return 0;
+    //Ordeno por nombre
+    int retorno;
+    retorno = strcmp( a->name, b->name );
+
+    return retorno;
 }
 
 

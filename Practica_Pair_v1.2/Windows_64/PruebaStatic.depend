@@ -69,3 +69,26 @@
 	"Employee.h"
 	<string.h>
 
+1528372612 source:d:\streppel\mipractica_c\practica_pair_v1.2\windows_64\parser.c
+	<stdio.h>
+	<stdlib.h>
+	"ArrayList.h"
+	"Employee.h"
+
+1528377574 d:\streppel\mipractica_c\practica_pair_v1.2\windows_64\arraylist.h
+
+1528372612 d:\streppel\mipractica_c\practica_pair_v1.2\windows_64\employee.h
+
+1528381139 source:d:\streppel\mipractica_c\practica_pair_v1.2\windows_64\employee.c
+	<stdio.h>
+	<stdlib.h>
+	"ArrayList.h"
+	"Employee.h"
+
+1528380931 source:d:\streppel\mipractica_c\practica_pair_v1.2\windows_64\main.c
+	<stdio.h>
+	<stdlib.h>
+	"ArrayList.h"
+	"Employee.h"
+	<string.h>
+

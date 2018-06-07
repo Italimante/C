@@ -87,9 +87,14 @@ int main()
         employee_print(eAux);
     }
 
-
     //Para ordenar:
+    al_sort(lista, employee_compare, 1);
+    printf("\n\nSeparador economico: \n");
 
+    for(i=0;i<2;i++){
+        eAux=(Employee*)al_get(lista, i);
+        employee_print(eAux);
+    }
 
 
     return 0;
