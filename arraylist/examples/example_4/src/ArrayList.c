@@ -207,6 +207,7 @@ int al_contains(ArrayList* this, void* pElement)
  */
 int al_set(ArrayList* this, int index,void* pElement)
 {
+    //Si conincide con el index lo agrega al final, si no lo mandariaal principio
     int returnAux = -1;
 
     if(this!=NULL && index>=0 && index < this->size){
