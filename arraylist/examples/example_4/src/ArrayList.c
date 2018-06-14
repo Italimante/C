@@ -209,6 +209,10 @@ int al_set(ArrayList* this, int index,void* pElement)
 {
     int returnAux = -1;
 
+    if(this!=NULL && index>=0 && index < this->size){
+
+    }
+
     return returnAux;
 }
 
