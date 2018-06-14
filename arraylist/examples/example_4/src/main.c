@@ -30,7 +30,7 @@ int main(void)
 {
         //startTesting(1); //new [DONE]
         //startTesting(2); //add [DONE]
-        //startTesting(3); //Delete
+        startTesting(3); //Delete
         //startTesting(4); //Al_len [DONE]
         //startTesting(5); //al_get
         //startTesting(6); //al_contains

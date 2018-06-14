@@ -3,6 +3,8 @@
 #include <string.h>
 #include "../inc/ArrayList.h"
 
+//Hacer tambien la practica donde usamos las funciones que hay que hacer aca --
+
 //El al_push es agarrar el elemento y ponerlo al final
 //Agregar al final es un add
 // -Segmentos de memoria.
@@ -15,6 +17,11 @@
     primero voy a borrar pelemnts porque es lo primero que se creo, y despues el arraylist
 
     liberar la lista y despues el arraylist
+
+
+    --------
+
+    ponerlo en nulo
 
 */
 
@@ -116,15 +123,13 @@ int al_add(ArrayList* this, void* pElement){
  * \return int Return (-1) if Error [pList is NULL pointer] - (0) if Ok
  *
  */
-int al_deleteArrayList(ArrayList* this)
-{
+int al_deleteArrayList(ArrayList* this){
     int returnAux = -1;
 
     if(this != NULL){
+        free(this->pElements);
         free(this);
-        if(this->size == NULL){
-            returnAux = 0;
-        }
+        returnAux = 0;
     }
 
     return returnAux;
