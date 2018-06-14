@@ -70,28 +70,26 @@ ArrayList* al_newArrayList(void)
  *
  */
 int al_add(ArrayList* this, void* pElement){
-    int returnAux=-1
-    int flag=0;
+    int returnAux = -1;
+    int flag = 0;
     void** aux;
 
     if(this!=NULL && pElement!=NULL){
-        if(this->size==this->reservedSize) //Si quiero cargar mas datos de los que elegi por defecto voy a hacer realloc
-        {
+        //Si quiero cargar mas datos de los que elegi por defecto voy a hacer realloc
+        if(this->size==this->reservedSize){
             aux= (void**) realloc(this->pElements, sizeof(void*)*(this->reservedSize + AL_INCREMENT));
-            if(aux!=NULL)
-            {
+            if(aux!=NULL){
                 this->pElements = aux;
                 this->reservedSize = this->reservedSize + AL_INCREMENT;
-            }
-            else
-            {
+            }else{
                 flag=1;
             }
-        } //Esta funcion es resize up, despues la llamo, tambien la necesito para al_push, etc...
+        }
+        //Esta funcion es resize up, despues la llamo, tambien la necesito para al_push, etc...
         //Con el size podemos saber en que posicion vamos a cargar la estructura
-        if(flag==0) //Si pudo agregar el elemento entonces hago lo siguiente:
-        {
-            this->pElements=pElement[this->size] = pElement;
+        //Si pudo agregar el elemento entonces hago lo siguiente:
+        if(flag==0){
+            this->pElements[this->size] = pElement;
             this->size++; //Para que cuando tenga que cargar otro elemento no me lo pise
             returnAux=0;
         }
@@ -111,7 +109,7 @@ int al_deleteArrayList(ArrayList* this)
     return returnAux;
 }
 
-/** \brief  Delete arrayList
+/** \brief  Return arraylist size
  * \param pList ArrayList* Pointer to arrayList
  * \return int Return length of array or (-1) if Error [pList is NULL pointer]
  *
@@ -119,6 +117,10 @@ int al_deleteArrayList(ArrayList* this)
 int al_len(ArrayList* this)
 {
     int returnAux = -1;
+
+    if(this!= NULL){
+
+    }
 
     return returnAux;
 }
