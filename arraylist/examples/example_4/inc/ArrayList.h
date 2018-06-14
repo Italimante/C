@@ -19,9 +19,9 @@
 #ifndef __ARRAYLIST
 #define __ARRAYLIST
 struct ArrayList{
-
-    void** pElements;
-    int size;
+    //pElement es una entidad
+    void** pElements; //Cantidad de elementos que hay cargados
+    int size; //Capacidad maxima
     int reservedSize;
 
     int     (*add)();

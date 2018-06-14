@@ -162,7 +162,7 @@ void* al_get(ArrayList* this, int index)
 {
     void* returnAux = NULL;
 
-    if(this!=NULL && index>=0 && index<this->size){
+    if(this!=NULL && index>=0 && index < this->size){
         returnAux = this->pElements[index];
     }
 
@@ -181,8 +181,17 @@ void* al_get(ArrayList* this, int index)
 int al_contains(ArrayList* this, void* pElement)
 {
     int returnAux = -1;
+    int i;
 
-
+    if(this!=NULL && pElement != NULL){
+        returnAux = 0;
+        for(i=0;i<this->size;i++){
+            if(this->pElements[i] == pElement){
+                returnAux = 1;
+                break;
+            }
+        }
+    }
 
     return returnAux;
 }

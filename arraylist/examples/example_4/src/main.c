@@ -32,8 +32,8 @@ int main(void)
         //startTesting(2); //add [DONE]
         //startTesting(3); //Delete [DONE]
         //startTesting(4); //Al_len [DONE]
-        startTesting(5); //al_get
-        //startTesting(6); //al_contains
+        //startTesting(5); //al_get [DONE]
+        startTesting(6); //al_contains
         //startTesting(7); //al_set
         //startTesting(8); //al_remove
         //startTesting(9); //al_clear
