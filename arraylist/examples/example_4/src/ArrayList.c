@@ -3,7 +3,21 @@
 #include <string.h>
 #include "../inc/ArrayList.h"
 
-//AAAAAAAAAAAAAAAAAAA
+//El al_push es agarrar el elemento y ponerlo al final
+//Agregar al final es un add
+// -Segmentos de memoria.
+
+// matar pelement y list
+// lo unico que se puede liberar con free es lo que contruimos con el array list, pelements y el arraylist
+/*
+    nunca hacer un free al dato
+    hay que liberar todo lo que hicimos malloc
+    primero voy a borrar pelemnts porque es lo primero que se creo, y despues el arraylist
+
+    liberar la lista y despues el arraylist
+
+*/
+
 
 // funciones privadas
 int resizeUp(ArrayList* this);
@@ -106,6 +120,13 @@ int al_deleteArrayList(ArrayList* this)
 {
     int returnAux = -1;
 
+    if(this != NULL){
+        free(this);
+        if(this->size == NULL){
+            returnAux = 0;
+        }
+    }
+
     return returnAux;
 }
 
@@ -119,7 +140,7 @@ int al_len(ArrayList* this)
     int returnAux = -1;
 
     if(this!= NULL){
-
+        returnAux = this->size;
     }
 
     return returnAux;

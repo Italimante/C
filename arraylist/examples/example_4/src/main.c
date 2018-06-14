@@ -28,23 +28,23 @@
 
 int main(void)
 {
-        startTesting(1);
-        startTesting(2);
-        /*startTesting(3);
-        startTesting(4);
-        startTesting(5);
-        startTesting(6);
-        startTesting(7);
-        startTesting(8);
-        startTesting(9);
-        startTesting(10);
-        startTesting(11);
-        startTesting(12);
-        startTesting(13);
-        startTesting(14);
-        startTesting(15);
-        startTesting(16);
-        startTesting(17);*/
+        //startTesting(1); //new [DONE]
+        //startTesting(2); //add [DONE]
+        //startTesting(3); //Delete
+        //startTesting(4); //Al_len [DONE]
+        //startTesting(5); //al_get
+        //startTesting(6); //al_contains
+        //startTesting(7); //al_set
+        //startTesting(8); //al_remove
+        //startTesting(9); //al_clear
+        //startTesting(10);
+        //startTesting(11); //al_push
+        //startTesting(12); //al_indexof
+        //startTesting(13); //al_isEmpty
+        //startTesting(14); //al_pop
+        //startTesting(15); //al_sublist
+        //startTesting(16); //al_contais_all
+        //startTesting(17); //al_sort
 
     return 0;
 }
