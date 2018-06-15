@@ -20,11 +20,11 @@
 #define __ARRAYLIST
 struct ArrayList{
     //pElement es una entidad
-    void** pElements; //Cantidad de elementos que hay cargados
-    int size; //Capacidad maxima
-    int reservedSize;
+    void** pElements; //Lista de elementos
+    int size; //Cantidad cargada hasta el momento
+    int reservedSize; //Memoria maxima reservada
 
-    int     (*add)();
+    int     (*add)(); //Agregar elemento
     int     (*len)();
     int     (*contains)();
     int     (*set)();

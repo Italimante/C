@@ -98,19 +98,20 @@ int al_add(ArrayList* this, void* pElement){
     if(this!=NULL && pElement!=NULL){
         //Si quiero cargar mas datos de los que elegi por defecto voy a hacer realloc
         if(this->size==this->reservedSize){
-            aux= (void**) realloc(this->pElements, sizeof(void*)*(this->reservedSize + AL_INCREMENT));
+            aux = (void**) realloc(this->pElements, sizeof(void*)*(this->reservedSize + AL_INCREMENT));
             if(aux!=NULL){
                 this->pElements = aux;
                 this->reservedSize = this->reservedSize + AL_INCREMENT;
             }else{
-                flag=1;
+                flag = 1;
             }
         }
         //Esta funcion es resize up, despues la llamo, tambien la necesito para al_push, etc...
         //Con el size podemos saber en que posicion vamos a cargar la estructura
         //Si pudo agregar el elemento entonces hago lo siguiente:
-        if(flag==0){
+        if(flag == 0){
             this->pElements[this->size] = pElement;
+            //*(this->pElements+i) == vec[0]
             this->size++; //Para que cuando tenga que cargar otro elemento no me lo pise
             returnAux=0;
         }
@@ -205,13 +206,23 @@ int al_contains(ArrayList* this, void* pElement)
  *                  - ( 0) if Ok
  *
  */
-int al_set(ArrayList* this, int index,void* pElement)
-{
-    //Si conincide con el index lo agrega al final, si no lo mandariaal principio
+int al_set(ArrayList* this, int index,void* pElement){ //TRATAR DE ENTENDER ESTO
+    //Si conincide con el index lo agrega al final, si no lo mandaria al principio
+    /*
+
+    */
+
     int returnAux = -1;
 
-    if(this!=NULL && index>=0 && index < this->size){
+    if(this!=NULL && pElement!=NULL && index>=0 && index < this->size){
 
+        if(index == this->len(pElement) && this->add(this,pElement)==0 ){
+                returnAux=0;
+            }
+        else{
+            this->pElements[index]=pElement;
+            returnAux = 0;
+        }
     }
 
     return returnAux;
@@ -227,6 +238,13 @@ int al_set(ArrayList* this, int index,void* pElement)
 int al_remove(ArrayList* this,int index)
 {
     int returnAux = -1;
+
+    if(this!=NULL && index < this->size && index>=0){
+        if(index == this->len(this)){
+
+        }
+
+    }
 
     return returnAux;
 }
