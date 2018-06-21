@@ -375,6 +375,18 @@ int al_sort(ArrayList* this, int (*pFunc)(void* ,void*), int order)
 {
     int returnAux = -1;
 
+    if(this!=NULL && pFunc!=NULL && (order == 1 || order == 0) ){
+
+
+        if(pFunc == 1){
+
+        }
+
+
+
+
+
+    }
 
 
 
