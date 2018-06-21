@@ -8,20 +8,21 @@
 //El al_push es agarrar el elemento y ponerlo al final
 //Agregar al final es un add
 // -Segmentos de memoria.
-
-// matar pelement y list
+// - Matar pelement y list
 // lo unico que se puede liberar con free es lo que contruimos con el array list, pelements y el arraylist
 /*
     nunca hacer un free al dato
     hay que liberar todo lo que hicimos malloc
     primero voy a borrar pelemnts porque es lo primero que se creo, y despues el arraylist
-
     liberar la lista y despues el arraylist
 
-
+    --------
+        El expand te corre todo del indice,  te deja el lugar vacio o con el repetido anterior, corre todo para un costado
+        y el contract lo contrario
+        (el add solucionaba que faltara lugar)
     --------
 
-    ponerlo en nulo
+    Ponerlo en nulo
 
 */
 
@@ -47,34 +48,31 @@ ArrayList* al_newArrayList(void)
     void* pElements;
     this = (ArrayList *)malloc(sizeof(ArrayList));
 
-    if(this != NULL)
-    {
+    if(this != NULL){
         pElements = malloc(sizeof(void *)*AL_INITIAL_VALUE );
-        if(pElements != NULL)
-        {
-            this->size=0;
-            this->pElements=pElements;
-            this->reservedSize=AL_INITIAL_VALUE;
-            this->add=al_add;
-            this->len=al_len;
-            this->set=al_set;
-            this->remove=al_remove;
-            this->clear=al_clear;
-            this->clone=al_clone;
-            this->get=al_get;
-            this->contains=al_contains;
-            this->push=al_push;
-            this->indexOf=al_indexOf;
-            this->isEmpty=al_isEmpty;
-            this->pop=al_pop;
-            this->subList=al_subList;
-            this->containsAll=al_containsAll;
+        if(pElements != NULL){
+            this->size = 0;
+            this->pElements = pElements;
+            this->reservedSize = AL_INITIAL_VALUE;
+            this->add = al_add;
+            this->len = al_len;
+            this->set = al_set;
+            this->remove = al_remove;
+            this->clear = al_clear;
+            this->clone = al_clone;
+            this->get = al_get;
+            this->contains = al_contains;
+            this->push = al_push;
+            this->indexOf = al_indexOf;
+            this->isEmpty = al_isEmpty;
+            this->pop = al_pop;
+            this->subList = al_subList;
+            this->containsAll = al_containsAll;
             this->deleteArrayList = al_deleteArrayList;
             this->sort = al_sort;
             returnAux = this;
         }
-        else
-        {
+        else{
             free(this);
         }
     }
@@ -208,9 +206,6 @@ int al_contains(ArrayList* this, void* pElement)
  */
 int al_set(ArrayList* this, int index,void* pElement){ //TRATAR DE ENTENDER ESTO
     //Si conincide con el index lo agrega al final, si no lo mandaria al principio
-    /*
-
-    */
 
     int returnAux = -1;
 
@@ -219,7 +214,7 @@ int al_set(ArrayList* this, int index,void* pElement){ //TRATAR DE ENTENDER ESTO
         if(index == this->len(pElement) && this->add(this,pElement)==0 ){
                 returnAux=0;
             }
-        else{
+            else{
             this->pElements[index]=pElement;
             returnAux = 0;
         }
@@ -243,7 +238,6 @@ int al_remove(ArrayList* this,int index)
         if(index == this->len(this)){
 
         }
-
     }
 
     return returnAux;
@@ -381,6 +375,10 @@ int al_sort(ArrayList* this, int (*pFunc)(void* ,void*), int order)
 {
     int returnAux = -1;
 
+
+
+
+
     return returnAux;
 }
 
@@ -390,12 +388,18 @@ int al_sort(ArrayList* this, int (*pFunc)(void* ,void*), int order)
  * \return int Return (-1) if Error [pList is NULL pointer or if can't allocate memory]
  *                  - (0) if ok
  */
-int resizeUp(ArrayList* this)
-{
+int resizeUp(ArrayList* this){
     int returnAux = -1;
-
+    void* aux = NULL;
+    if(this->size == this->reservedSize){
+        aux = (void*)realloc(this->pElements,sizeof(void*) * (this->reservedSize+AL_INCREMENT));
+        if(aux != NULL){
+            this->pElements = aux;
+            this->reservedSize += AL_INCREMENT;
+            returnAux = 0;
+        }
+    }
     return returnAux;
-
 }
 
 /** \brief  Expand an array list
@@ -404,10 +408,17 @@ int resizeUp(ArrayList* this)
  * \return int Return (-1) if Error [pList is NULL pointer or invalid index]
  *                  - ( 0) if Ok
  */
-int expand(ArrayList* this,int index)
-{
+int expand(ArrayList* this,int index){
     int returnAux = -1;
-
+    int i;
+    if(this!=NULL){
+        this->size++;
+        resizeUp(this);
+        for(i = index; i > this->size; i--){
+            this->pElements[i]=this->pElements[i-1];
+        }
+        returnAux=0;
+    }
     return returnAux;
 }
 
@@ -417,9 +428,15 @@ int expand(ArrayList* this,int index)
  * \return int Return (-1) if Error [pList is NULL pointer or invalid index]
  *                  - ( 0) if Ok
  */
-int contract(ArrayList* this,int index)
-{
+int contract(ArrayList* this,int index){
     int returnAux = -1;
-
+    int i;
+    if(this!=NULL){
+        this->size--;
+        for(i = index; i < this->size; i++){
+            this->pElements[i]=this->pElements[i+1];
+        }
+        returnAux=0;
+    }
     return returnAux;
 }
