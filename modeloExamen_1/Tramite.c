@@ -1,5 +1,6 @@
 #include <stdio.h>
 #include <stdlib.h>
+#include <string.h>
 #include "Tramite.h"
 
 //Un constructor
@@ -52,4 +53,65 @@ int mostrarTramite(eTramite* this){
         printf("%d - - - %s\n", getId(this), getDni(this));
     }
     return mostro;
+}
+
+int compararPorDni(void * tramiteA, void * tramiteB){
+    eTramite* tramite1;
+    eTramite* tramite2;
+
+    //Lo tengo que castear a eTramite, porque es un puntero a VOID
+    tramite1 = (eTramite*) tramite1;
+    tramite2 = (eTramite*) tramite2;
+
+    return strcmp(tramite1->dni, tramite2->dni);
+}
+
+int mostrarListaTramites(ArrayList* listado){
+    int listo = -1;
+    int i;
+    int len;
+    eTramite * tramiteActual;
+
+    if(listado!=NULL){
+            //mientras sea menor al len
+            // el len afuera
+        for(i=0;i<listado->len(listado);i++){
+            tramiteActual = (eTramite*) listado->get(listado, i);
+            mostrarTramite(tramiteActual);
+        }
+        listo = 0;
+    }
+
+    return listo;
+}
+
+int cargarTramite(ArrayList* listado, int id, char* dni){
+    int cargo = -1;
+    eTramite* tramiteActual;
+    if(listado != NULL && id>0 && dni!=NULL){
+        tramiteActual = new_Tramite();
+        setId( tramiteActual,  id);
+        setDni(tramiteActual, dni);
+        listado->add(listado,tramiteActual);
+        cargo = 0;
+    }
+    return cargo;
+}
+
+int atenderTramite( ArrayList* listaPendientes, ArrayList* listaAtendidos ){
+    int atendio = -1;
+    eTramite * tramiteActual;
+
+    if(listaPendientes!=NULL && listaAtendidos!=NULL){
+
+        tramiteActual = (eTramite*) listaAtendidos->pop(listaPendientes, 0);
+        listaAtendidos->add(listaAtendidos,tramiteActual);
+        mostrarTramite(tramiteActual);
+
+
+        atendio = 0;
+    }
+
+
+    return atendio;
 }

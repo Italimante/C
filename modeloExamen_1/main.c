@@ -24,78 +24,90 @@ int main(){
     ArrayList* listaTramitesUrgentes;
     ArrayList* listaTramitesRegulares;
 
+    //Para cuando ya estan atendidos lo guardamos aca
+    ArrayList* atendidosUrgentes;
+    ArrayList* atendidosRegulares;
+
     eTramite * tramiteActual;
     char dni[10];
 
     listaTramitesUrgentes = al_newArrayList();
     listaTramitesRegulares = al_newArrayList();
 
+    atendidosUrgentes = al_newArrayList();
+    atendidosRegulares = al_newArrayList();
+
     do{
         printf("1- Tramite urgente\n2- Tramite regular\n3- Proximo\n4- Listar pendientes\n5- Informar atendidos\n6- Salir\n");
         scanf("%d",&opcion);
         switch(opcion){
-        case 1:
-            //Creo el tramite
-            //El new tiene que estar dentro del while
-            tramiteActual = new_Tramite();
-            ultimoIdTramiteUrgente++;
-            //Seteo los valores
-            setId( tramiteActual,  ultimoIdTramiteUrgente);
-            printf("Ingrese su DNI\n");
-            fflush(stdin);
-            gets(dni);
-            setDni(tramiteActual, dni);
-            //mostrarTramite(tramiteActual);
-            listaTramitesUrgentes->add(listaTramitesUrgentes,tramiteActual);
-            break;
-        case 2:
-            tramiteActual = new_Tramite();
-            ultimoIdTramiteRegular++;
-            //Seteo los valores
-            setId( tramiteActual,  ultimoIdTramiteRegular);
-            printf("Ingrese su DNI\n");
-            fflush(stdin);
-            gets(dni);
-            setDni(tramiteActual, dni);
-            //mostrarTramite(tramiteActual);
-            listaTramitesRegulares->add(listaTramitesRegulares,tramiteActual);
-            break;
+            case 1:
+                //Creo el tramite
+                //El new tiene que estar dentro del while
+                ultimoIdTramiteUrgente++;
+                printf("[TU] - Ingrese su DNI:\n");
+                fflush(stdin);
+                gets(dni);
+                cargarTramite(listaTramitesUrgentes,ultimoIdTramiteUrgente,dni);
+                break;
+            case 2:
+                ultimoIdTramiteRegular++;
+                printf("[TR] - Ingrese su DNI:\n");
+                fflush(stdin);
+                gets(dni);
+                cargarTramite(listaTramitesRegulares,ultimoIdTramiteRegular,dni);
+                break;
 
-        case 3:
-            if(!listaTramitesUrgentes->isEmpty(listaTramitesUrgentes)){
-                //le hago un pop del primer elemento, siempre del primer elemento
-                tramiteActual = (eTramite*) listaTramitesUrgentes->pop(listaTramitesUrgentes, 0);
-                printf("Cliente a ser atentido: \n");
-                mostrarTramite(tramiteActual);
-            }
-
-
-            break;
-
-        case 4:
-            //Uso la funcion isEmpty) para saber si esta vacio o no, asi no muestro o lo hago entrar al pedo
-            if(!listaTramitesUrgentes->isEmpty(listaTramitesUrgentes)){
-                len = listaTramitesUrgentes->len(listaTramitesUrgentes);
-                printf("Tramites urgentes\n");
-                for(i=0; i<len; i++){
-                    tramiteActual = (eTramite*) listaTramitesUrgentes->get(listaTramitesUrgentes,i);
-                    mostrarTramite(tramiteActual);
+            case 3:
+                //Si la lista no esta vacia tomamos el primer tramite y lo mostrabamos
+                //la de regulares estaria imitada a esta lista
+                if(!listaTramitesUrgentes->isEmpty(listaTramitesUrgentes)){
+                    printf("Cliente a ser atentido [URGENTE]: \n");
+                    atenderTramite(listaTramitesUrgentes, atendidosUrgentes);
+                }else{
+                    if(!listaTramitesRegulares->isEmpty(listaTramitesRegulares)){
+                        printf("Cliente a ser atentido [REGULAR]: \n");
+                        atenderTramite(listaTramitesRegulares, atendidosRegulares);
+                    }
+                    else{
+                        printf("No hay clientes por atender!\n");
+                    }
                 }
-            }
+                break;
 
-            if(!listaTramitesRegulares->isEmpty(listaTramitesRegulares)){
-                len = listaTramitesRegulares->len(listaTramitesRegulares);
-                printf("Tramites regulares\n");
-                for(i=0; i<len; i++){
-                    tramiteActual = (eTramite*) listaTramitesRegulares->get(listaTramitesRegulares,i);
-                    mostrarTramite(tramiteActual);
+            case 4:
+                //Uso la funcion isEmpty) para saber si esta vacio o no, asi no muestro o lo hago entrar al pedo
+                if(!listaTramitesUrgentes->isEmpty(listaTramitesUrgentes)){
+                    len = listaTramitesUrgentes->len(listaTramitesUrgentes);
+                    printf("Tramites urgentes\n");
+                    mostrarListaTramites(listaTramitesUrgentes);
                 }
-            }
 
-            break;
+                if(!listaTramitesRegulares->isEmpty(listaTramitesRegulares)){
+                    len = listaTramitesRegulares->len(listaTramitesRegulares);
+                    printf("Tramites regulares\n");
+                    mostrarListaTramites(listaTramitesRegulares);
+                }
+
+                break;
+
+            case 5:
+                if(!atendidosUrgentes->isEmpty(atendidosUrgentes)){
+                    len = atendidosUrgentes->len(atendidosUrgentes);
+                    atendidosUrgentes->sort(atendidosUrgentes,compararPorDni,0);
+                    printf("Tramites urgentes\n");
+                    mostrarListaTramites(atendidosUrgentes);
+                }
+
+                if(!atendidosRegulares->isEmpty(atendidosRegulares)){
+                    len = atendidosRegulares->len(atendidosRegulares);
+                    atendidosRegulares->sort(atendidosRegulares,compararPorDni,0);
+                    printf("Tramites regulares\n");
+                    mostrarListaTramites(atendidosRegulares);
+                }
+
+                break;
             }
-            //system("pause");
-            //system("cls");
     }while(1);
 
 
