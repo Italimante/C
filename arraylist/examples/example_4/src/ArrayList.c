@@ -371,26 +371,37 @@ int al_containsAll(ArrayList* this,ArrayList* this2)
  * \return int Return (-1) if Error [pList or pFunc are NULL pointer]
  *                  - (0) if ok
  */
-int al_sort(ArrayList* this, int (*pFunc)(void* ,void*), int order)
-{
+int al_sort(ArrayList* this, int (*pFunc)(void* ,void*), int order){
     int returnAux = -1;
+    void* pElementA=NULL;
+    void* pElementB=NULL;
+    void* pElementAux=NULL;
 
-    if(this!=NULL && pFunc!=NULL && (order == 1 || order == 0) ){
+    if(this!=NULL && pFunc!=NULL && (order == 1 || order == 0)){
+        for(int i=0;i<this->len(this)-1;i++){
+            for(int j=i+1; j<this->len(this);j++){
+                pElementA=this->get(this,i);
+                pElementB=this->get(this,j);
 
+                if(order==1){
+                    if(pFunc(pElementA,pElementB)){
+                        pElementAux=this->pElements[i];
+                        this->pElements[i]=this->pElements[j];
+                        this->pElements[j]=pElementAux;
+                    }
+                }
 
-        if(pFunc == 1){
-
+                if(order==0){
+                    if(pFunc(pElementA,pElementB)==-1){
+                        pElementAux=this->pElements[i];
+                        this->pElements[i]=this->pElements[j];
+                        this->pElements[j]=pElementAux;
+                    }
+                }
+            }
         }
-
-
-
-
-
+        returnAux=0;
     }
-
-
-
-
     return returnAux;
 }
 

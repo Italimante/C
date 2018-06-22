@@ -1,0 +1,22 @@
+# depslib dependency file v1.0
+1529673556 source:d:\streppel\mipractica_c\modeloexamen_1\main.c
+	<stdio.h>
+	<stdlib.h>
+	"Tramite.h"
+	"ArrayList.h"
+
+1529671173 d:\streppel\mipractica_c\modeloexamen_1\tramite.h
+
+1529671185 source:d:\streppel\mipractica_c\modeloexamen_1\tramite.c
+	<stdio.h>
+	<stdlib.h>
+	"Tramite.h"
+
+1529594539 d:\streppel\mipractica_c\modeloexamen_1\arraylist.h
+
+1529672454 source:d:\streppel\mipractica_c\modeloexamen_1\arraylist.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	"ArrayList.h"
+
