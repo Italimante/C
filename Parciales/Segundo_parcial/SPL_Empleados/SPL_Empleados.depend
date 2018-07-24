@@ -1,0 +1,99 @@
+# depslib dependency file v1.0
+1530809061 source:d:\andy\programación\c\spl1_empleados\spl_empleados\main.c
+	<stdio.h>
+	<stdlib.h>
+	"inc/ArrayList.h"
+
+1530810737 d:\andy\programación\c\spl1_empleados\spl_empleados\inc\arraylist.h
+
+1532359535 source:d:\andy\programación\c\spl1_empleados\spl_empleados\arraylist.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	"inc/ArrayList.h"
+
+1532466698 source:d:\andy\programación\c\spl1_empleados\spl_empleados (limpio)\arraylist.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	"inc/ArrayList.h"
+
+1532466752 d:\andy\programación\c\spl1_empleados\spl_empleados (limpio)\inc\arraylist.h
+
+1532467685 source:d:\andy\programación\c\spl1_empleados\spl_empleados (limpio)\structempleado.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	<ctype.h>
+	<conio.h>
+	"inc/StructEmpleado.h"
+
+1532467333 d:\andy\programación\c\spl1_empleados\spl_empleados (limpio)\inc\structempleado.h
+	"ArrayList.h"
+
+1532467105 source:d:\andy\programación\c\spl1_empleados\spl_empleados (limpio)\main.c
+	<stdio.h>
+	<stdlib.h>
+	"inc/ArrayList.h"
+	"inc/StructEmpleado.h"
+	"inc/DataValidation.h"
+
+1532467786 source:d:\andy\programación\c\spl1_empleados\spl_empleados (limpio)\datavalidation.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	<ctype.h>
+	<conio.h>
+	"inc/DataValidation.h"
+
+1532463111 d:\andy\programación\c\spl1_empleados\spl_empleados (limpio)\inc\datavalidation.h
+
+1532467135 source:d:\andy\programación\c\spl1_empleados\spl_empleados (limpio)\parser.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	<ctype.h>
+	<conio.h>
+	"inc/Parser.h"
+	"inc/ArrayList.h"
+	"inc/StructEmpleado.h"
+
+1532465720 d:\andy\programación\c\spl1_empleados\spl_empleados (limpio)\inc\parser.h
+	"ArrayList.h"
+
+1532466698 source:d:\andy\programación\c\#gitclone\c\parciales\segundo_parcial\spl_empleados\arraylist.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	"inc/ArrayList.h"
+
+1532466752 d:\andy\programación\c\#gitclone\c\parciales\segundo_parcial\spl_empleados\inc\arraylist.h
+
+1532467786 source:d:\andy\programación\c\#gitclone\c\parciales\segundo_parcial\spl_empleados\datavalidation.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	<ctype.h>
+	<conio.h>
+	"inc/DataValidation.h"
+
+1532463111 d:\andy\programación\c\#gitclone\c\parciales\segundo_parcial\spl_empleados\inc\datavalidation.h
+
+1532467105 source:d:\andy\programación\c\#gitclone\c\parciales\segundo_parcial\spl_empleados\main.c
+	<stdio.h>
+	<stdlib.h>
+	"inc/ArrayList.h"
+	"inc/StructEmpleado.h"
+	"inc/DataValidation.h"
+
+1532467333 d:\andy\programación\c\#gitclone\c\parciales\segundo_parcial\spl_empleados\inc\structempleado.h
+	"ArrayList.h"
+
+1532467878 source:d:\andy\programación\c\#gitclone\c\parciales\segundo_parcial\spl_empleados\structempleado.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	<ctype.h>
+	<conio.h>
+	"inc/StructEmpleado.h"
+
