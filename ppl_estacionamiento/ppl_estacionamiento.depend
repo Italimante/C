@@ -1,0 +1,109 @@
+# depslib dependency file v1.0
+1526422607 source:c:\users\itali\desktop\practicando c\ppl_estacionamiento\prop.c
+	"prop.h"
+	<string.h>
+
+1526423047 c:\users\itali\desktop\practicando c\ppl_estacionamiento\prop.h
+
+1526422710 source:c:\users\itali\desktop\practicando c\ppl_estacionamiento\main.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	"prop.h"
+
+1527444635 source:d:\andy\programación\c\ppl_estacionamiento\main.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	"prop.h"
+	"auto.h"
+
+1527444635 d:\andy\programación\c\ppl_estacionamiento\prop.h
+
+1527449871 source:d:\andy\programación\c\ppl_estacionamiento\prop.c
+	"prop.h"
+	"auto.h"
+	<string.h>
+	<stdio.h>
+	<time.h>
+	<stdlib.h>
+
+1527445410 source:d:\andy\programación\c\ppl_estacionamiento\auto.c
+	"auto.h"
+	"prop.h"
+	<string.h>
+	<stdio.h>
+	<stdlib.h>
+
+1527444635 d:\andy\programación\c\ppl_estacionamiento\auto.h
+
+1527120028 source:d:\andy\programación\c\ppl_estacionamiento\egreso.c
+	"auto.h"
+	"prop.h"
+	<string.h>
+	<stdio.h>
+	<stdlib.h>
+
+1527116624 d:\andy\programación\c\ppl_estacionamiento\egreso.h
+
+1527163134 source:d:\##gitclone\ppl_estacionamiento\egreso.c
+	"auto.h"
+	"prop.h"
+	<string.h>
+	<stdio.h>
+	<stdlib.h>
+
+1527169271 d:\##gitclone\ppl_estacionamiento\auto.h
+
+1527165045 d:\##gitclone\ppl_estacionamiento\prop.h
+
+1527169284 source:d:\##gitclone\ppl_estacionamiento\main.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	"prop.h"
+	"auto.h"
+
+1527163134 d:\##gitclone\ppl_estacionamiento\egreso.h
+
+1527169533 source:d:\##gitclone\ppl_estacionamiento\prop.c
+	"prop.h"
+	"auto.h"
+	<string.h>
+	<stdio.h>
+	<time.h>
+	<stdlib.h>
+
+1527163260 source:d:\##gitclone\ppl_estacionamiento\auto.c
+	"auto.h"
+	"prop.h"
+	<string.h>
+	<stdio.h>
+	<stdlib.h>
+
+1527773151 source:d:\streppel\ppl_estacionamiento\main.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	"prop.h"
+	"auto.h"
+
+1527773567 d:\streppel\ppl_estacionamiento\prop.h
+
+1527773748 d:\streppel\ppl_estacionamiento\auto.h
+
+1527773309 source:d:\streppel\ppl_estacionamiento\prop.c
+	"prop.h"
+	"auto.h"
+	<string.h>
+	<stdio.h>
+	<time.h>
+	<stdlib.h>
+
+1527770017 source:d:\streppel\ppl_estacionamiento\auto.c
+	"auto.h"
+	"prop.h"
+	<string.h>
+	<stdio.h>
+	<stdlib.h>
+
