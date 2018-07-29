@@ -1,0 +1,2 @@
+Esto es un texto dentro de un fichero.
+ Y esto en la segunda linea

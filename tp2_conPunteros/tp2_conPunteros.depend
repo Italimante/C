@@ -1,0 +1,13 @@
+# depslib dependency file v1.0
+1526652774 source:d:\streppel\punterosenc-\tp2_conpunteros\epersona.c
+	"ePersona.h"
+	<stdio.h>
+
+1526652803 d:\streppel\punterosenc-\tp2_conpunteros\epersona.h
+
+1526652936 source:d:\streppel\punterosenc-\tp2_conpunteros\main.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	"ePersona.h"
+

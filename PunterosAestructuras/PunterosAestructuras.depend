@@ -1,0 +1,5 @@
+# depslib dependency file v1.0
+1526648972 source:d:\streppel\punterosenc-\punterosaestructuras\main.c
+	<stdio.h>
+	<stdlib.h>
+
