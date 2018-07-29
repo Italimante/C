@@ -1,0 +1,17 @@
+# depslib dependency file v1.0
+1525351820 source:d:\se puede borrar\practica_ppl1\eproducto.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	"eProducto.h"
+
+1525351698 d:\se puede borrar\practica_ppl1\eproducto.h
+
+1525351818 source:d:\se puede borrar\practica_ppl1\eventa.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	"eVenta.h"
+
+1525351698 d:\se puede borrar\practica_ppl1\eventa.h
+

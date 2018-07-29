@@ -1,0 +1,29 @@
+# depslib dependency file v1.0
+1524754220 source:d:\streppel_andres\estructuras\localidad.c
+	"localidad.h"
+
+1524754107 d:\streppel_andres\estructuras\localidad.h
+
+1524754756 source:d:\streppel_andres\estructuras\main.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	"test.h"
+	"localidad.h"
+
+1524752919 d:\streppel_andres\estructuras\test.h
+
+1524829658 source:d:\streppel_andres\gerflix\estructurasbackup\main.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	"test.h"
+	"localidad.h"
+
+1524829424 d:\streppel_andres\gerflix\estructurasbackup\test.h
+
+1524829424 d:\streppel_andres\gerflix\estructurasbackup\localidad.h
+
+1524829709 source:d:\streppel_andres\gerflix\estructurasbackup\localidad.c
+	"localidad.h"
+

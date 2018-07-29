@@ -1,0 +1,52 @@
+# depslib dependency file v1.0
+1524605400 source:c:\test\scarafilo\gerflix 1.0\main.c
+	<stdio.h>
+	<stdlib.h>
+	"Usuario.h"
+
+1524580030 c:\test\scarafilo\gerflix 1.0\serie.h
+
+1524600972 c:\test\scarafilo\gerflix 1.0\usuario.h
+	"Serie.h"
+
+1524605468 source:c:\test\scarafilo\gerflix 1.0\serie.c
+	"Serie.h"
+	<string.h>
+
+1524601547 source:c:\test\scarafilo\gerflix 1.0\usuario.c
+	"Usuario.h"
+
+1524840431 source:d:\streppel_andres\gerflix\gerflix 1.0\main.c
+	<stdio.h>
+	<stdlib.h>
+	"Usuario.h"
+
+1524842393 d:\streppel_andres\gerflix\gerflix 1.0\usuario.h
+	"Serie.h"
+
+1524842414 d:\streppel_andres\gerflix\gerflix 1.0\serie.h
+
+1524842328 source:d:\streppel_andres\gerflix\gerflix 1.0\serie.c
+	"Serie.h"
+	<string.h>
+
+1524840631 source:d:\streppel_andres\gerflix\gerflix 1.0\usuario.c
+	"Usuario.h"
+
+1524856013 source:c:\users\itali\desktop\practicando c\gerflix\gerflix 1.0\usuario.c
+	"Usuario.h"
+
+1524855366 c:\users\itali\desktop\practicando c\gerflix\gerflix 1.0\usuario.h
+	"Serie.h"
+
+1524855301 c:\users\itali\desktop\practicando c\gerflix\gerflix 1.0\serie.h
+
+1524856051 source:c:\users\itali\desktop\practicando c\gerflix\gerflix 1.0\main.c
+	<stdio.h>
+	<stdlib.h>
+	"Usuario.h"
+
+1524855355 source:c:\users\itali\desktop\practicando c\gerflix\gerflix 1.0\serie.c
+	"Serie.h"
+	<string.h>
+
