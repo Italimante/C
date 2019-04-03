@@ -1,0 +1,53 @@
+# depslib dependency file v1.0
+1525213102 source:c:\andy\tp2_abm\epersona.c
+	"ePersona.h"
+	<stdio.h>
+
+1525206325 c:\andy\tp2_abm\epersona.h
+
+1525213322 source:c:\andy\tp2_abm\main.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	"ePersona.h"
+
+1525298810 source:c:\users\itali\desktop\practicando c\tp_laboratorio_1\tp2_abmpersonas\epersona.c
+	"ePersona.h"
+	<stdio.h>
+
+1525297921 c:\users\itali\desktop\practicando c\tp_laboratorio_1\tp2_abmpersonas\epersona.h
+
+1525297923 source:c:\users\itali\desktop\practicando c\tp_laboratorio_1\tp2_abmpersonas\main.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	"ePersona.h"
+
+1525356372 source:d:\se puede borrar\tp_laboratorio_1\tp2_abmpersonas\main.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	"ePersona.h"
+
+1525357142 d:\se puede borrar\tp_laboratorio_1\tp2_abmpersonas\epersona.h
+
+1525356996 source:d:\se puede borrar\tp_laboratorio_1\tp2_abmpersonas\epersona.c
+	"ePersona.h"
+	<stdio.h>
+
+1549005339 source:c:\users\itali\desktop\tp_laboratorio_1\tp2_abmpersonas\epersona.c
+	"ePersona.h"
+	<stdio.h>
+
+1547480600 c:\users\itali\desktop\tp_laboratorio_1\tp2_abmpersonas\epersona.h
+
+1549003415 source:c:\users\itali\desktop\tp_laboratorio_1\tp2_abmpersonas\main.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	"ePersona.h"
+
+1549004010 source:c:\users\itali\desktop\tp_laboratorio_1\tp2_abmpersonas\mystringcheck.c
+	"ePersona.h"
+	<string.h>
+

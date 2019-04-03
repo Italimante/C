@@ -1,0 +1,14 @@
+# depslib dependency file v1.0
+1547480600 source:c:\users\itali\desktop\tp_laboratorio_1\tp1_calculadora_correction\main.c
+	<stdio.h>
+	<stdlib.h>
+	"functions.h"
+
+1548878791 c:\users\itali\desktop\tp_laboratorio_1\tp1_calculadora_correction\functions.h
+
+1549003206 source:c:\users\itali\desktop\tp_laboratorio_1\tp1_calculadora_correction\functions.c
+	<stdio.h>
+	<stdlib.h>
+	"functions.h"
+	"string.h"
+

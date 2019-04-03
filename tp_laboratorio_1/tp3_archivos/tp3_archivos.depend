@@ -1,0 +1,48 @@
+# depslib dependency file v1.0
+1527377438 source:d:\andy\programación\c\tp_laboratorio_1\tp3_archivos\emovie.c
+	"eMovie.h"
+
+1527378758 d:\andy\programación\c\tp_laboratorio_1\tp3_archivos\emovie.h
+
+1528226497 source:d:\andy\programación\c\tp_laboratorio_1\tp3_archivos\main.c
+	<stdio.h>
+	<stdlib.h>
+	"sMovie.h"
+
+1527376640 d:\andy\programación\c\tp_laboratorio_1\tp3_archivos\emovie.c
+	"eMovie.h"
+
+1528226543 source:d:\andy\programación\c\tp_laboratorio_1\tp3_archivos\smovie.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	"sMovie.h"
+
+1528225804 d:\andy\programación\c\tp_laboratorio_1\tp3_archivos\smovie.h
+
+1527981059 source:c:\andy\tp_laboratorio_1\tp3_archivos\main.c
+	<stdio.h>
+	<stdlib.h>
+	"sMovie.h"
+
+1527979806 c:\andy\tp_laboratorio_1\tp3_archivos\smovie.h
+
+1527981903 source:c:\andy\tp_laboratorio_1\tp3_archivos\smovie.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	"sMovie.h"
+
+1550768639 source:c:\users\itali\desktop\tp_laboratorio_1\tp3_archivos\main.c
+	<stdio.h>
+	<stdlib.h>
+	"sMovie.h"
+
+1550768467 c:\users\itali\desktop\tp_laboratorio_1\tp3_archivos\smovie.h
+
+1550768387 source:c:\users\itali\desktop\tp_laboratorio_1\tp3_archivos\smovie.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	"sMovie.h"
+
