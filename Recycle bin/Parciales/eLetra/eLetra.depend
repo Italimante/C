@@ -1,0 +1,50 @@
+# depslib dependency file v1.0
+1532468751 source:d:\streppel\eletra\arraylist.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	"inc/ArrayList.h"
+
+1532468751 d:\streppel\eletra\inc\arraylist.h
+
+1532528040 source:d:\streppel\eletra\datavalidation.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	<ctype.h>
+	<conio.h>
+	"inc/DataValidation.h"
+
+1532528140 d:\streppel\eletra\inc\datavalidation.h
+
+1532531764 source:d:\streppel\eletra\main.c
+	<stdio.h>
+	<stdlib.h>
+	"inc/ArrayList.h"
+	"inc/StructEmpleado.h"
+	"inc/DataValidation.h"
+
+1532526365 d:\streppel\eletra\inc\structempleado.h
+	"ArrayList.h"
+
+1532530962 source:d:\streppel\eletra\parser.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	<ctype.h>
+	<conio.h>
+	"inc/Parser.h"
+	"inc/ArrayList.h"
+	"inc/StructEmpleado.h"
+
+1532468751 d:\streppel\eletra\inc\parser.h
+	"ArrayList.h"
+
+1532531730 source:d:\streppel\eletra\structempleado.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	<ctype.h>
+	<conio.h>
+	"inc/StructEmpleado.h"
+
